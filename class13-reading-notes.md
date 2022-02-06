@@ -1,69 +1,69 @@
 # El Reading Notes of the 401 Variety
 
-## Class 12 reading notes
+## Class 13 reading notes
 
 ### El Questions
 
-#### 1. What is the benefit of transforming data into packets?
+#### 1. What does it mean that web sockets are bidirectional? Why is this useful?
 
-- Packets split the data in order for it to be processed more efficiently which in turn makes sending the data much faster.
+- Bi-directional means information is sent in both directions. Think `response` `request` data flow.
 
-#### 2. UDP is often refereed to as a connection-less protocol. Why is this?
+#### 2. Does socket.io use HTTP? Why?
 
-- A UDP does not require a connection be established between the source and destination to transmit data.
+- Socket.io is created in a way to allow HTTP and websocket servers to co-exist on the same port location.
 
-#### 3. Can a socket server application have multiple socket connections?
+#### 3. What happens when a client emits an event?
 
-- Yes, tt is possible to have multiple TCP sockets listen on the same port connection.
+- The server 'subscribes' to it and is able to be triggered.
 
-#### 4. Can a socket connection application be connected to multiple socket servers?
+#### 4. What happens if a client “misses” an event?
 
-- Yes.
+- Packets are dropped and data is lost.
 
-#### 5. Can an application be both a socket server and a socket connection?
+#### 5. How can we mitigate this?
 
-- It is not necessary. But if you want to have a "peer-to-peer" type system, then you just have each client run both a client and a server socket - the server socket for accepting connections from other clients and the client socket for establishing connections to others..
+- Drop or eliminate the use of old sockets.
 
 ### Document the following Vocabulary Terms
 
-**Observer Pattern**
+**Socket**
 
-> The observer pattern is a software design pattern in which an object, named the subject, maintains a list of its dependents, called observers, and notifies them automatically of any state changes, usually by calling one of their methods.
+> An instance of a client connected to a server.
 
-**Listener**
+**Web Socket**
 
-> Listens for a specific event to be logged.
+> This is a computer communications protocol. AKA a way a computer has of communicating information between multiple servers & clients.
 
-**Event Handler**
+**Socket.io**
 
-> Logs when an event is triggered, runs callback function if such a function is provided.
+> Real-time bidirectional and event-based communication for sending multiple events across multiple servers & clients.
 
-**Event-Driven Programminmg**
+**Client**
 
-> Programming that is "driven" by events. Functions don't run unless events are triggered.
+> This is one application that is connected to one or multiple servers.
 
-**Event Loop**
+**Server**
 
-> The event loop is referred to as the message dispatcher, message loop, message pump, or run loop. The event loop is a programming construct or design pattern that waits for and dispatches events or messages in a program.
+> These are the data/information-centers that connect multiple clients to each other or deal with responding to a request.
 
-**Event Queue**
+**OSI Model**
 
-> An event queue is a repository where events from an application are held prior to being processed by a receiving program or system.
+> This is the 7 layer model of explaining the functions of a networking system.
 
-**Call Stack**
+**TCP Model**
 
-> A call stack is a stack data structure that stores information about the active subroutines of a computer program.
+> This is a more concise version of the OSI model, consisting of only 4 layers.
 
-**Emit/Raise/Trigger**
+**TCP**
 
-> Triggers an event after an action occurs.
+> Transmission Control Protocol - The transport protocol that is used
 
-**Subscribe**
+**UDP**
 
-> Signing up (subscribing) to receive a product regularly.
+> User Diagram Protocol - The communications protocol that is used for establishing low-latency and loss-tolerating connections between applications on the internet.
 
-**Database**
+**Packets**
 
-> Collection of dataDescribe the similarities between AWS API Gateway + Lambda functions and an ExpressJS Server.
+> These are the raw data send between connections that the headers tells to reconstruct properly into the data.
 
  <a href="#top">Take Me To The Repo!!</a>
