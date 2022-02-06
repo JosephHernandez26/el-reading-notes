@@ -1,76 +1,70 @@
 # El Reading Notes of the 401 Variety
 
-## Class 19 reading notes
+## Class 12 reading notes
 
 ### El Questions
 
-#### 1. Describe the similarities between AWS API Gateway + Lambda functions and an ExpressJS Server.
+#### 1. What is the benefit of transforming data into packets?
 
-- They all happen to use that fancy WRRC, isn't that neat?
+- Packets split the data in order for it to be processed more efficiently which in turn makes sending the data much faster.
 
-#### 2. List the AWS Database offerings and talk about the pros and cons of each.
+#### 2. UDP is often refereed to as a connection-less protocol. Why is this?
 
-**Amazon Aurora, RDS, Redshift are relational:**
+- A UDP does not require a connection be established between the source and destination to transmit data.
 
-- Traditional applications, enterprise resource planning, customer relationship management ecommerce.
+#### 3. Can a socket server application have multiple socket connections?
 
-**Amazon DynamoDB uses key-value:**
+- Yes, tt is possible to have multiple TCP sockets listen on the same port connection.
 
-- High-traffic web applications, ecommerce systems, gaming applications.
+#### 4. Can a socket connection application be connected to multiple socket servers?
 
-**Amazon ElastiCache, MemoryDB for Redis use in-memory:**
+- Yes.
 
-- Caching, session management, gaming leaderboards, geospatial applications.
+#### 5. Can an application be both a socket server and a socket connection?
 
-**Amazon DocumentDB for Document:**
-
-- Content management, catalogs, user profiles.
-
-**Amazon Keyspaces for wide Column:**
-
-- High-scale industrial apps for equipment maintenance, fleet management, and route optimization.
-
-**Amazon Neptune with graph:**
-
-- Fraud detection, social networking, recommendation engine.
-
-**Amazon Timestream time series:**
-
-- Internet of Things (IoT) applications, DevOps, industrial telemetry.
-Amazon LedgerDB for ledger: Systems of record, supply chain, registrations, banking transactions.
-
-#### 3. What’s the difference between a FIFO and a standard queue?.
-
-- Standard queues provide delivery, at least once. Meaning, each message is delivered at least once, make sense?
-
-- FIFO queues provide processing exactly once. Meaning, each message is delivered *exactly* once and will remain available until the consumer processes it and deletes it. Duplicates **are not** introduced into the queue.
-
-#### 4. How can the server be assured a message was properly received?
-
-- Use AWS SQS with a FIFO queue.
+- It is not necessary. But if you want to have a "peer-to-peer" type system, then you just have each client run both a client and a server socket - the server socket for accepting connections from other clients and the client socket for establishing connections to others..
 
 ### Document the following Vocabulary Terms
 
-**Serverless API**
+**Observer Pattern**
 
-> Serverless is a cloud computing execution model where the cloud provider dynamically manages the allocation and provisioning of servers. A serverless application runs in stateless compute containers that are event-triggered, ephemeral, and fully managed by the cloud provider.
+> The observer pattern is a software design pattern in which an object, named the subject, maintains a list of its dependents, called observers, and notifies them automatically of any state changes, usually by calling one of their methods.
 
-[The Source of the Knowledge](https://hackernoon.com/what-is-serverless-architecture-what-are-its-pros-and-cons-cc4b804022e9)
+**Listener**
 
-**Triggers**
+> Listens for a specific event to be logged.
 
-> The method of embedding information in the document that tells the javascript where to attach its event handlers
+**Event Handler**
 
-**Dynamo vs Mongo**
+> Logs when an event is triggered, runs callback function if such a function is provided.
 
-> **Mongo:** MongoDB is platform-agnostic and configured with the database to run virtually anywhere from a local machine, container, or on-premise deployment to any cloud provider. It requires users to manage all the infrastructure and configurations. MongoDB is a schema-free database.
+**Event-Driven Programminmg**
 
->**Dynamo:** DynamoDB is limited to AWS and can only configure and use DynamoDB through AWS. It's a fully managed database. DynamoDB is a schema-less database but with no ability to enforce schemas.
+> Programming that is "driven" by events. Functions don't run unless events are triggered.
 
-[The Source of the Knowledge](https://www.bmc.com/blogs/mongodb-vs-dynamodb/)
+**Event Loop**
 
-**Dynamoose vs Mongoose**
+> The event loop is referred to as the message dispatcher, message loop, message pump, or run loop. The event loop is a programming construct or design pattern that waits for and dispatches events or messages in a program.
 
-> The ORM that refers to the specific database type its connected to (Dynamo and Mongo, respectively).
+**Event Queue**
+
+> An event queue is a repository where events from an application are held prior to being processed by a receiving program or system.
+
+**Call Stack**
+
+> A call stack is a stack data structure that stores information about the active subroutines of a computer program.
+
+**Emit/Raise/Trigger**
+
+> Triggers an event after an action occurs.
+
+**Subscribe**
+
+> Signing up (subscribing) to receive a product regularly.
+
+**Database**
+
+> Collection of dataDescribe the similarities between AWS API Gateway + Lambda functions and an ExpressJS Server.
 
  <a href="#top">Take Me To The Repo!!</a>
+ 
