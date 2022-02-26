@@ -18,9 +18,6 @@
    - *JSON Web Token* - **JWT** is an open standard that defines a compact and self-contained way for securely transmitting information between parties as a JSON object.
    - **JWT**s can be signed using a secret or a public/private key pair using **RSA** or **ECDSA**.
    - [The Source](https://jwt.io/introduction)
-4. ****
-   - 
-   - [The Source]()  
 
 ### **Document the following Vocabulary Terms**
 
@@ -32,4 +29,3 @@
       - [The Source](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies)
 
  <a href="#top">Take Me To The Repo!!</a>
- 
