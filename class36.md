@@ -1,6 +1,6 @@
 # **El Reading Notes of the 401 Variety**
 
-## **Class 17 reading notes**
+## **Class 36 reading notes**
 
 ### **El Questions**
 
